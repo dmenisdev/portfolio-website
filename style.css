@@ -1,0 +1,336 @@
+.intro:where(.dmenis-dn001) {
+    font-size: var(--fontsize-intro);
+    line-height: 1.2;
+    font-weight: var(--weight-light);
+    margin-bottom: 2px;
+}
+
+.work-list:where(.dmenis-dn001) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--list-gap);
+    margin-bottom: var(--section-space)
+}
+
+@media screen and (min-width: 600px) {
+    .work-list:where(.dmenis-dn001) {
+        grid-template-columns:1fr 1fr
+    }
+}
+
+.work-item:where(.dmenis-item001) img {
+    display: block;
+    border-radius: var(--list-radius)
+}
+
+.work-item {
+    position: relative; /* Needed for perspective to apply correctly to child and for z-index */
+    /* Ensure all work-items maintain a consistent aspect ratio */
+    aspect-ratio: 3/2; /* Matches your image aspect ratio (1200x800) */
+    min-height: 0; /* Prevents flex/grid items from potentially growing excessively */
+    overflow: hidden; /* Ensures content stays within bounds, especially rounded corners */
+    border-radius: var(--list-radius); /* Apply border-radius here for consistency */
+}
+
+:root {
+    --font-mono: "DM Mono", serif;
+    --font-sans: "Epilogue", sans-serif;
+    --fontsize-small: 1rem;
+    --fontsize-base: clamp(1.125rem, 1.4vw, 1.375rem);
+    --fontsize-large: clamp(1.125rem, 1.5vw, 2rem);
+    --fontsize-xlarge: clamp(1.75rem, 3.75vw, 3rem);
+    --fontsize-intro: clamp(1.5rem, 5vw, 2.5rem);
+    --weight-light: 300;
+    --weight-normal: 400;
+    --weight-bold: 700;
+    --color-text: hsl(180, 10%, 4%);
+    --color-bg: hsl(195, 20%, 96%);
+    --color-placeholder: hsl(195, 20%, 88%);
+    --container-padding: clamp(1rem, 5vw, 4rem);
+    --container-max: 1280px;
+    --section-space: clamp(2rem, 5vw, 4rem);
+    --list-gap: clamp(1.5rem, 3.75vw, 3rem);
+    --list-radius: clamp(.5rem, 1.25vw, 1rem)
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-placeholder: hsl(195, 20%, 12%)
+    }
+}
+
+html {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: var(--fontsize-base);
+    font-weight: var(--weight-normal);
+    color: var(--color-text);
+    background-color: var(--color-bg)
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color:var(--color-text);
+        color: var(--color-bg)
+    }
+}
+
+.small-text {
+    font-family: 'Inter', sans-serif; /* Using a newly imported font */
+    font-size: 0.7rem; /* Smaller font size */
+    font-variant-caps: small-caps;
+    line-height: 0.5; /* Adjust line-height for readability when small */
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  
+.theme-dark {
+    --color-placeholder: hsl(195, 20%, 12%);
+    background-color: var(--color-text);
+    color: var(--color-bg)
+}
+
+.contain {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+    max-width: var(--container-max)
+}
+
+.contain:focus,article:focus,main:focus {
+    outline: none
+}
+
+.contain--large {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1440px
+}
+
+#swup:focus {
+    outline: none
+}
+
+img,video {
+    max-width: 100%;
+    height: auto
+}
+
+h1,h2,h3 {
+    font-weight: var(--weight-bold)
+}
+
+h1 {
+    font-size: var(--fontsize-xlarge);
+    margin: 0 0 .5em
+}
+
+h2 {
+    font-size: var(--fontsize-large)
+}
+
+h3 {
+    font-size: var(--fontsize-base)
+}
+
+.caption {
+    text-align: center;
+    margin-top: clamp(1rem,1.875vw,1.5rem)
+}
+
+.icon path {
+    fill: currentColor
+}
+
+.section {
+    margin-bottom: var(--section-space);
+}
+
+.section img,.section video {
+    display: block
+}
+
+@media screen and (max-width: 600px) {
+    .section:where(.contain) {
+        padding:0
+    }
+}
+
+.work-item img,.section img,.section video {
+    background-color: var(--color-placeholder)
+}
+
+.header:where(.dmenis-header) {
+    padding-top: clamp(1.5rem,6.25vw,5rem);
+    margin-bottom: clamp(1.5rem,3.75vw,3rem)
+}
+
+.header:where(.dmenis-header) a:where(.dmenis-header) {
+    color: currentColor;
+    text-decoration: none
+}
+
+.logo:where(.dmenis-header) {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    align-items: center
+}
+
+.logo:where(.dmenis-header) path {
+    fill: currentColor
+}
+
+.large:where(.dmenis-header) svg {
+    height: 56px;
+    width: auto
+}
+
+.name:where(.dmenis-header) {
+    margin-left: .5rem
+}
+
+.large:where(.dmenis-header) .name:where(.dmenis-header) {
+    margin-left: 1rem
+}
+
+@media (min-width: 600px) {
+    .name:where(.dmenis-header) {
+        margin-left:1rem
+    }
+
+    .large:where(.dmenis-header) .name:where(.dmenis-header) {
+        margin-left: 1.5rem
+    }
+}
+
+h1:where(.dmenis-header).title {
+    margin: 0 0 .15em
+}
+
+h2:where(.dmenis-header).title {
+    margin: 0 0 .25em
+}
+
+.subtitle:where(.dmenis-header) {
+    margin: 0
+}
+
+.subtitle:where(.dmenis-header) {
+    font-weight: var(--weight-normal)
+}
+
+/* -------------------------------------------------------- */
+/* Card flipper                                             */
+/* -------------------------------------------------------- */
+.card-flipper-checkbox {
+    display: none; /* Hide the checkbox */
+}
+
+.work-item-flipper-label {
+    display: block;
+    width: 100%;
+    height: 100%; /* Ensure it fills the work-item */
+    cursor: pointer;
+    position: absolute; /* Position absolute to fill the work-item */
+    top: 0;
+    left: 0;
+}
+
+.work-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ensure it fills the label */
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    border-radius: var(--list-radius);
+}
+
+/* Trigger flip when checkbox is checked */
+.card-flipper-checkbox:checked + .work-item-flipper-label .work-card-inner {
+    transform: rotateY(180deg);
+}
+
+.work-card-front,
+.work-card-back {
+    position: absolute; /* Keep absolute for layering during flip */
+    width: 100%;
+    height: 100%; /* Ensure they fill the inner container */
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    overflow: hidden;
+    /* Add Flexbox for content centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-card-front {
+    /* background-color: var(--color-placeholder); */
+    z-index: 2; /* Ensure front is on top initially */
+    /* Force hardware acceleration even when not transforming this prevents 
+    images not rendering in the browswer or flickering */
+    transform: translateZ(0);     
+    will-change: transform;
+}
+
+.work-card-front picture,
+.work-card-front img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--list-radius);
+}
+
+.work-card-back {
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    transform: rotateY(180deg);
+    z-index: 1; /* Behind the front initially, comes to front on flip */
+}
+
+.work-card-back-content {
+    /* Ensure content is centered and has padding */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%; /* Ensure content takes full width within flex container */
+}
+
+.work-card-back-content h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: #ecf0f1;
+}
+
+.work-card-back-content p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.work-card-back-content .visit-site-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #3498db; /* A nice blue for the link */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px; /* Space above the link */
+    font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+    transition: background-color 0.3s;
+}
+
+.work-card-back-content .visit-site-link:hover {
+    background-color: #2980b9;
+}
