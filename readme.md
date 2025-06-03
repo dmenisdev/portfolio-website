@@ -1,13 +1,19 @@
+# Intro
+Simple portfolio website that reads the portfolio data from a JSON file.
+
+NOTE:
+This git contains the source code of the portfolio website I use however the install instruction have not been tested. 😬
+If there are any issue add them to the Github issue list of this project.
+Not all data has been made available in the JSON, room for improvement. 😅
+
 # Installation
 
 ## Install Vite 
-Terminal session:
 ```
 npm install --save-dev vite
 ```
 
 ## Install EJS
-Terminal session:
 ```
 npm install --save-dev ejs
 ```
@@ -18,12 +24,12 @@ However for each of those files there is an example file.
 Example files have the extenion `.example`, remove the extension and edit the file to include your personal data.
 
 Rename file `./ejs/data.json.example` to `./ejs/data.json`.
+
 Rename file `./sitemap.xml.example` to `./sitemap.xml`.
 
 # How to use
 
 ## Run in development
-Terminal session:
 ```
 npm run dev
 ```
@@ -32,13 +38,11 @@ npm run dev
 The build script generates files for production in folder `dist`.
 You can upload the content of the `dist` folder to any webserver there are no dependencies.
 
-Terminal session:
 ```
 npm run build
 ```
 
 ## Preview production
-Terminal session:
 ```
 npm run preview
 ```
@@ -53,13 +57,12 @@ Images must have an aspect ration of 3:2.
 
 After the update use the `ejs` command to update the index.html file.
 
-Terminal session:
 ```
 npx ejs ./ejs/templates/work-cards.ejs -f ./ejs/data.json -o ./src/index.html
 ```
 
 # Design guide
-Webpage automatically switched to dark mode depending on your local system settings.
+Webpage automatically switches to dark mode depending on your local system settings.
 
 # Tips and Recommendations
 1. If you use VSCode install this [EJS support plugin](https://marketplace.visualstudio.com/items/?itemName=DigitalBrainstem.javascript-ejs-support) for the EJS templates.
