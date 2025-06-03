@@ -3,3 +3,4 @@
 /src/public/work_card_images/*
 !/src/public/work_card_images/example*
 /ejs/data.json
+/src/sitemap.xml

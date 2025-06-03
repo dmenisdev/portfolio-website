@@ -12,8 +12,13 @@ Terminal session:
 npm install --save-dev ejs
 ```
 
-## Init data file
-Rename example file `./ejs/example_data.json` to `./ejs/data.json`.
+## Init files with personal data
+Files that contain personal data are not in the git repository.
+However for each of those files there is an example file.
+Example files have the extenion `.example`, remove the extension and edit the file to include your personal data.
+
+Rename file `./ejs/data.json.example` to `./ejs/data.json`.
+Rename file `./sitemap.xml.example` to `./sitemap.xml`.
 
 # How to use
 
@@ -24,7 +29,7 @@ npm run dev
 ```
 
 ## Deployment
-Generate files for production in folder `dist`.
+The build script generates files for production in folder `dist`.
 You can upload the content of the `dist` folder to any webserver there are no dependencies.
 
 Terminal session:
