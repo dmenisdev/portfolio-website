@@ -12,6 +12,9 @@ Terminal session:
 npm install --save-dev ejs
 ```
 
+## Init data file
+Rename example file `./ejs/example_data.json` to `./ejs/data.json`.
+
 # How to use
 
 ## Run in development
@@ -22,6 +25,7 @@ npm run dev
 
 ## Deployment
 Generate files for production in folder `dist`.
+You can upload the content of the `dist` folder to any webserver there are no dependencies.
 
 Terminal session:
 ```
