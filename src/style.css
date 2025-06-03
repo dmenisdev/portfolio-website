@@ -277,7 +277,9 @@ h2:where(.dmenis-header).title {
     /* background-color: var(--color-placeholder); */
     z-index: 2; /* Ensure front is on top initially */
     /* Force hardware acceleration even when not transforming this prevents 
-    images not rendering in the browswer or flickering */
+    images not rendering in the browswer or flickering. 
+    "will-change" is curcial to prevent (partially) empty cards on browser 
+    resizing and scrolling */
     transform: translateZ(0);     
     will-change: transform;
 }
@@ -295,6 +297,7 @@ h2:where(.dmenis-header).title {
     background-color: #2c3e50; /* Dark background */
     color: white; /* White text */
     transform: rotateY(180deg);
+    will-change: transform;
     z-index: 1; /* Behind the front initially, comes to front on flip */
 }
 
