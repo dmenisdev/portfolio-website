@@ -1,0 +1,27 @@
+<% /* templates/item-list.ejs */ %>
+<% items.forEach(function(item, index){ %>
+    <div class="work-item dmenis-item<%= String(index + 1).padStart(3, '0') %>">
+        <input type="checkbox" id="card-flipper-<%= item.id %>" class="card-flipper-checkbox">
+        <label for="card-flipper-<%= item.id %>" class="work-item-flipper-label">
+             <div class="work-card-inner">
+                  <div class="work-card-front">
+                       <picture>
+                            <source type="image/avif"
+                                 srcset="<%= item.image %>.avif 1x, <%= item.image %>.avif 2x">
+                            <img src="<%= item.image %>.jpg" alt="<%= item.title %>" width="1200"
+                                 height="800" loading="lazy"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/1200x800/E0E0E0/B0B0B0?text=Image+Not+Found';">
+                       </picture>
+                  </div>
+                  <div class="work-card-back">
+                       <div class="work-card-back-content">
+                            <h3><%= item.title %></h3>
+                            <p><%= item.content %></p>
+                            <p>Role: <%= item.role %></p>
+                            <p><%= item.tech_stack %></p>
+                       </div>
+                  </div>
+             </div>
+        </label>
+    </div>
+<% }); %>

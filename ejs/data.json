@@ -1,0 +1,130 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "title": "Construction Industry.",
+            "content": "Worked for 10+ years in the construction industry for several large European construction companies. Responsible for integrating legacy applications with the SAP ERP system, financial reporting and streamling business processess.",
+            "image": "/images/bam_construct_office_with_title",
+            "category": "Software Engineer",
+            "role": "Software Engineer",
+            "tech_stack": "SAP, ABAP, SAP Fiori, JavaScript, Node.js, ThreeJS, BPM, MQSI, Mercator, EDI, XML, JSON"
+        },
+        {
+            "id": 2,
+            "title": "Minzee Skin Analyser",
+            "content": "Helped developing the Skin Analyser. Web application with API for third party access and front-end with React framework. Python desktop application with Tkinter.",
+            "image": "images/minzee_skin_analyser_900x600",
+            "category": "Web application",
+            "role": "Software Engineer",
+            "tech_stack": "React, Python, Tkinter"
+        },
+        {
+            "id": 3,
+            "title": "wordPOS",
+            "content": "wordPOS creates seamless synchronization between WooCommerce and Loyverse POS. Developed together with WebifySEO.",
+            "image": "images/wordpos",
+            "category": "Wordpress plugin",
+            "role": "Software Engineer",
+            "tech_stack": "Python, FastAPI, PHP, HTMX, Wordpress"
+        },
+        {
+            "id": 4,
+            "title": "ADCM",
+            "content": "ADCM offers bespoke transaction and consultancy for the alternative debt and FinTech scene. Automated their email process.",
+            "image": "images/adcm",
+            "category": "Web application",
+            "role": "Software Engineer",
+            "tech_stack": "Python, Flask"
+        },
+        {
+            "id": 5,
+            "title": "Syncwerk GmbH",
+            "content": "Design and implemented a contract management system using Django and Rest API. Customer facing front-end build with Angular.",
+            "image": "images/syncwerk",
+            "category": "Web application",
+            "role": "Software Engineer",
+            "tech_stack": "Python, Django, Angular, MariaDB"
+        },
+        {
+            "id": 6,
+            "title": "Carbonie",
+            "content": "Upgrade existing Django app and MySQL database. Code cleanup and advice on improving security.",
+            "image": "images/carbonie",
+            "category": "Web application",
+            "role": "Software Engineer",
+            "tech_stack": "Python, Django, MySQL"
+        },
+        {
+            "id": 7,
+            "title": "Feedlur",
+            "content": "Startup. Developing a Social News Network. It had a successful launch but did not get enough traction.",
+            "image": "images/feedlur_mobile",
+            "category": "Web application",
+            "role": "Technology lead",
+            "tech_stack": "PHP, Javascript, MySQL"
+        },
+        {
+            "id": 8,
+            "title": "AM Real Estate",
+            "content": "Design of a new system to easily manage and consolidate the administration of the 200+ subsidiaries. Including an interactive visual representation of the subsidiaries legal structure.",
+            "image": "images/am_vastgoed",
+            "category": "SAP Development Consultant",
+            "role": "Senior SAP Development Consultant",
+            "tech_stack": "SAP, ABAP, NodeJS, ThreeJS, Javascript"
+        },
+        {
+            "id": 9,
+            "title": "BAM Construction UK",
+            "content": "Responsible for all SAP developments and design within BAM Construction UK. Among others creating an interface with Inland revenue.",
+            "image": "images/bamconstruct_900x600",
+            "category": "SAP Development Consultant",
+            "role": "Senior SAP Development Consultant",
+            "tech_stack": "SAP, ABAP, SAP Modules PS FI CO SD MM EDI"
+        },
+        {
+            "id": 10,
+            "title": "British Council",
+            "content": "Design and implementation Travelex interface for payment cards and purchase order approval workflow.",
+            "image": "images/bclogo",
+            "category": "SAP Development Consultant",
+            "role": "Senior SAP Development Consultant",
+            "tech_stack": "SAP, ABAP, SAP Modules PS FI MM EDI, NodeJS, Javascript"
+        },
+        {
+            "id": 11,
+            "title": "No code programming",
+            "content": "Hired by IBM to work on a project to generate SAP programs from BPM models.",
+            "image": "images/nocode_ibm",
+            "category": "Software engineer",
+            "role": "Software engineer",
+            "tech_stack": "SAP, ABAP, C++"
+        },
+        {
+            "id": 12,
+            "title": "Wyass & Freytag",
+            "content": "Improving project management with focus on cashflow and planning. Implementation subcontractor reporting system.",
+            "image": "images/wf_900x600",
+            "category": "SAP Development Consultant",
+            "role": "Senior SAP Development Consultant",
+            "tech_stack": "SAP, ABAP, C++"
+        },
+        {
+            "id": 13,
+            "title": "Softador",
+            "content": "Finalizing and bringing internally created debt management web application to production. Backend Django (Python) with React front-end.",
+            "image": "images/Softadore_640x410",
+            "category": "Fullstack developer",
+            "role": "Fullstack developer",
+            "tech_stack": "Python, Django, Javascript, ReactJS"
+        },
+        {
+            "id": 14,
+            "title": "Hans Anders opticians",
+            "content": "Responsible for integrating SAP ERP with their store POS systems. Managing the integration for more than 350 stores in Europe.",
+            "image": "images/hansanders",
+            "category": "Software engineer specializing in EAI",
+            "role": "Software engineer specializing in EAI",
+            "tech_stack": "SAP, ABAP, C++, Mercator, MQSI"
+        }
+    ]
+}
