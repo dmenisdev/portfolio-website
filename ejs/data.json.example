@@ -1,4 +1,10 @@
 {
+    "title": "Frederick Sample",
+    "subtitle": "Software engineer & Team leader",
+    "description": "Frederick Sample is a Software Engineer.",
+    "name": "Frederick Sample",
+    "logo": "/personal_images/example_logo.avif",
+    "intro": "I enjoy a challenge and working in teams.",
     "items": [
         {
             "id": 1,

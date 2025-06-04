@@ -1,7 +1,7 @@
 /.DS_Store
 /private/
-/src/public/work_card_images/*
-!/src/public/work_card_images/example*
+/src/public/personal_images/*
+!/src/public/personal_images/example*
 /ejs/data.json
 /src/sitemap.xml
 /src/favicon.ico
