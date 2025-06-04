@@ -7,7 +7,8 @@
     "start:vite": "vite",
     "start:dev": "concurrently \"npm run watch:ejs-data\" \"npm run start:vite\"",
     "build": "npm run precompile:ejs && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "install": "npm install && mv ./ejs/data.json.example ./ejs/data.json && mv ./sitemap.xml.example ./sitemap.xml && mkdir -p dist purged"    
   },
   "devDependencies": {
     "concurrently": "^9.1.2",

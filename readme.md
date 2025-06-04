@@ -14,9 +14,9 @@ Not all data has been made available in the JSON, room for improvement. 😅
 
 # Installation
 
-## Install packates
+## Install 
 ```
-npm install
+npm run install
 ```
 
 ## Init files with personal data
