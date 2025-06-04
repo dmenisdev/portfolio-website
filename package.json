@@ -2,12 +2,18 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "precompile:ejs": "npx ejs ./ejs/templates/work-cards.ejs -f ./ejs/data.json -o ./src/index.html",
+    "watch:ejs-data": "onchange 'ejs/data.json' -- npm run precompile:ejs",
+    "start:vite": "vite",
+    "start:dev": "concurrently \"npm run watch:ejs-data\" \"npm run start:vite\"",
+    "build": "npm run precompile:ejs && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "ejs": "^3.1.10",
+    "onchange": "^7.1.0",
+    "purgecss": "^7.0.2",
     "vite": "^6.3.5"
   }
 }

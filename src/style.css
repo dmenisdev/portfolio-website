@@ -337,3 +337,7 @@ h2:where(.dmenis-header).title {
 .work-card-back-content .visit-site-link:hover {
     background-color: #2980b9;
 }
+
+.work-place {
+    border: 5px;
+}

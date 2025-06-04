@@ -6,16 +6,17 @@ This git contains the source code of the portfolio website I use however the ins
 If there are any issue add them to the Github issue list of this project.
 Not all data has been made available in the JSON, room for improvement. 😅
 
+## Objectives
+1. Keeping It Super Simple.
+2. Static website with no hosting dependencies.
+3. Portfolio data stored and managed separately.
+4. Keep local dependencies to a minimum.
+
 # Installation
 
-## Install Vite 
+## Install packates
 ```
-npm install --save-dev vite
-```
-
-## Install EJS
-```
-npm install --save-dev ejs
+npm install
 ```
 
 ## Init files with personal data
@@ -31,8 +32,10 @@ Rename file `./sitemap.xml.example` to `./sitemap.xml`.
 
 ## Run in development
 ```
-npm run dev
+npm run start:dev
 ```
+
+This will run the Vite development server and a watcher for file `ejs/data.json`.
 
 ## Deployment
 The build script generates files for production in folder `dist`.
@@ -55,10 +58,32 @@ The `image` field contains the image path WITHOUT the file extension!
 For each image there must be a `jpg` and `avif` image in the folder `./scr/public`.
 Images must have an aspect ration of 3:2.
 
-After the update use the `ejs` command to update the index.html file.
-
+When you save `data.json` the `index.html` will automatically be updated with the new data.
+In case this doesn't happen you can also run the command manually.
 ```
 npx ejs ./ejs/templates/work-cards.ejs -f ./ejs/data.json -o ./src/index.html
+```
+
+## Clean up CSS [Optional]
+Remove unused rules from CSS.
+
+IMPORTANT
+Make sure you have a folder `purged` in the root of the project.
+
+```
+npx purgecss \
+  --css src/style.css \
+  --content src/**/*.html \
+  --output purged/
+```
+
+Don't forget to add the `js` files should there be any.
+
+```
+npx purgecss \
+  --css src/style.css \
+  --content src/**/*.html src/**/*.js \
+  --output purged/
 ```
 
 # Design guide
