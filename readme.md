@@ -37,6 +37,20 @@ npm run start:dev
 
 This will run the Vite development server and a watcher for file `ejs/data.json`.
 
+## Update content
+Data for the `work-cards` is stored in the `./ejs/data.json` file.
+To update the content of the portfolio website edit the `data.json` file.
+
+The `image` field contains the image path WITHOUT the file extension!
+For each image there must be a `jpg` and `avif` image in the folder `./scr/public/..`.
+Images must have an aspect ration of 3:2.
+
+When you save `data.json` the `index.html` will automatically be updated with the new data.
+In case this doesn't happen you can also run the command manually.
+```
+npx ejs ./ejs/templates/work-cards.ejs -f ./ejs/data.json -o ./src/index.html
+```
+
 ## Deployment
 The build script generates files for production in folder `dist`.
 You can upload the content of the `dist` folder to any webserver there are no dependencies.
@@ -46,22 +60,9 @@ npm run build
 ```
 
 ## Preview production
+You can run preview are you done a build.
 ```
 npm run preview
-```
-
-## Update content
-Data for the `work-cards` is stored in the `./ejs/data.json` file.
-To update the content of the portfolio website edit the `data.json` file.
-
-The `image` field contains the image path WITHOUT the file extension!
-For each image there must be a `jpg` and `avif` image in the folder `./scr/public`.
-Images must have an aspect ration of 3:2.
-
-When you save `data.json` the `index.html` will automatically be updated with the new data.
-In case this doesn't happen you can also run the command manually.
-```
-npx ejs ./ejs/templates/work-cards.ejs -f ./ejs/data.json -o ./src/index.html
 ```
 
 ## Clean up CSS [Optional]
