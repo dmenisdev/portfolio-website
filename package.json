@@ -2,13 +2,15 @@
   "name": "portfolio-website",
   "version": "0.1.0",
   "scripts": {
-    "precompile:ejs": "npx ejs ./ejs/templates/work-cards.ejs -f ./ejs/data.json -o ./src/index.html",
+    "precompile:ejs": "npx ejs ./ejs/templates/work-cards.ejs -f ./ejs/data.json -o ./src/index.html && npx ejs ./ejs/templates/contacts.ejs -f ./ejs/data.json -o ./src/contacts.html",
     "watch:ejs-data": "onchange 'ejs/data.json' -- npm run precompile:ejs",
+    "watch:ejs-template": "onchange 'ejs/templates/work-cards.ejs' -- npm run precompile:ejs",
+    "watch:ejs-contacts": "onchange 'ejs/templates/contacts.ejs' -- npm run precompile:ejs",
     "start:vite": "vite",
-    "start:dev": "concurrently \"npm run watch:ejs-data\" \"npm run start:vite\"",
+    "start:dev": "concurrently \"npm run watch:ejs-data\" \"npm run watch:ejs-template\" \"npm run watch:ejs-contacts\" \"npm run start:vite\"",
     "build": "npm run precompile:ejs && vite build",
     "preview": "vite preview",
-    "install": "npm install && mv ./ejs/data.json.example ./ejs/data.json && mv ./sitemap.xml.example ./sitemap.xml && mkdir -p dist purged"    
+    "install": "npm install && mv ./ejs/data.json.example ./ejs/data.json && mv ./sitemap.xml.example ./sitemap.xml && mkdir -p dist purged"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",

@@ -1,0 +1,44 @@
+<% /* templates/contacts.ejs */ %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<header class="header contain dmenis-header">
+    <a class="logo large dmenis-header" href="/">
+         <img src="/personal_images/profile_logo_small.avif" alt="Profile Logo" class="profile-logo" width="54" height="48" />
+         <div class="name dmenis-header">
+              <h1 class="title dmenis-header">Well, hello there.</h1>
+              <h2 class="subtitle dmenis-header">Pop me an email or give me a shout on social media.</h2>
+         </div>
+    </a>
+    <a class="contact-me" href="/">
+        <img src="/images/back_800px.svg" alt="Back button" class="contact-icon" />
+        <p class="small-text">back</p>
+   </a>
+</header>
+
+
+<body>
+    <main class="contain">
+        <section class="section-contacts">
+            <div class="contact-grid">
+                <% contacts.forEach(function(contact, index){ %>
+                    <a class="contact-item" href="<%= contact.link %>" target="_blank">
+                        
+                        <img src="<%= contact.image %>" alt="<%= contact.image %>" 
+                        class="contact-logo <% if (contact.darkmode) { %>invert-on-dark-mode<% } %>">
+                        <p class="contact-link"><%= contact.title %></p>
+                    </a>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

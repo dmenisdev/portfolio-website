@@ -49,7 +49,7 @@
     --container-padding: clamp(1rem, 5vw, 4rem);
     --container-max: 1280px;
     --section-space: clamp(2rem, 5vw, 4rem);
-    --list-gap: clamp(1.5rem, 3.75vw, 3rem);
+    --list-gap: clamp(1.5rem, 2.75vw, 1rem);
     --list-radius: clamp(.5rem, 1.25vw, 1rem)
 }
 
@@ -72,6 +72,13 @@ body {
     font-weight: var(--weight-normal);
     color: var(--color-text);
     background-color: var(--color-bg)
+}
+
+a {
+    /* Remove underline from links */
+    text-decoration: none;  
+    /* Prevent color change after link is visited */
+    color: var(--color-text);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -168,13 +175,39 @@ h3 {
 }
 
 .header:where(.dmenis-header) {
-    padding-top: clamp(1.5rem,6.25vw,5rem);
-    margin-bottom: clamp(1.5rem,3.75vw,3rem)
+    display: flex;
+    justify-content: space-between; /* Space between logo and contact-me */
+    align-items: center; /* Ensure both elements have the same height */
+    padding-top: clamp(1.5rem, 6.25vw, 5rem);
+    margin-bottom: clamp(1.5rem, 3.75vw, 3rem);
 }
 
 .header:where(.dmenis-header) a:where(.dmenis-header) {
     color: currentColor;
     text-decoration: none
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    text-align: center;
+}
+
+.contact-me p {
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.contact-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 0.15rem; /* Reduce spacing between the icon and text */
+}
+
+.contact-me p {
+    font-size: 0.8rem; /* Make the text smaller */
+    margin: 0.2rem; /* Remove default margins */
 }
 
 .logo:where(.dmenis-header) {
@@ -274,7 +307,6 @@ h2:where(.dmenis-header).title {
 }
 
 .work-card-front {
-    /* background-color: var(--color-placeholder); */
     z-index: 2; /* Ensure front is on top initially */
     /* Force hardware acceleration even when not transforming this prevents 
     images not rendering in the browswer or flickering. 
@@ -350,4 +382,75 @@ h2:where(.dmenis-header).title {
     padding: 0.0rem; /* Adjusted padding */
     box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* Adjusted shadow */
     object-fit: cover; /* Ensures the image scales properly */
+}
+
+/* -------------------------------------------------------- */
+/* social media contact grid */
+/* -------------------------------------------------------- */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--list-gap);
+    margin-top: var(--section-space);
+}
+
+@media screen and (min-width: 600px) {
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    border: 1px solid var(--color-bg);
+    border-radius: var(--list-radius);
+}
+
+.contact-item:hover {
+    border-color: var(--color-text);
+}
+
+.contact-logo {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+}
+
+.contact-link {
+    font-size: var(--fontsize-large);
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 1rem;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.contact-link:hover {
+    text-decoration: none;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .contact-item:hover {
+        /* background-color: var(--color-bg); */
+        border-color: var(--color-placeholder);
+    }
+
+    .contact-link {
+        color: var(--color-bg);
+    }
+
+    .invert-on-dark-mode {
+        filter: invert(100%);
+    }
+}
+
+/* Dark mode adjustments for the logo */
+@media (prefers-color-scheme: dark) {
+    .header:where(.dmenis-header) .contact-me img.contact-icon {
+        filter: invert(1); /* Invert the colors */
+    }
 }
