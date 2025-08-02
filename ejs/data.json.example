@@ -24,5 +24,31 @@
             "role": "Your job title.",
             "tech_stack": "Technologies used."
         }
-    ]
+    ],
+    "contacts": [
+        {
+            "id": 1,
+            "title": "Pop me an email",
+            "link": "mailto:your.email@test.com?subject=Hi, I liked your website.",
+            "image": "/images/contacts/email_128px.png",
+            "darkmode": true,
+            "socialmedia_id": "email"
+        },
+        {
+            "id": 3,
+            "title": "Have a look at my Bluesky",
+            "link": "https://bsky.app/profile/your_account.bsky.social",
+            "image": "/images/contacts/bluesky_600px.svg",
+            "darkmode": false,
+            "socialmedia_id": "bsky"
+        },
+        {
+            "id": 4,
+            "title": "dmenisdev on Github",
+            "link": "https://github.com/your_github_account",
+            "image": "/images/contacts/github_128px.png",
+            "darkmode": true,
+            "socialmedia_id": "github"
+        } 
+    ]    
 }

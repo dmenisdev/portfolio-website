@@ -10,7 +10,7 @@
     "start:dev": "concurrently \"npm run watch:ejs-data\" \"npm run watch:ejs-template\" \"npm run watch:ejs-contacts\" \"npm run start:vite\"",
     "build": "npm run precompile:ejs && vite build",
     "preview": "vite preview",
-    "install": "npm install && mv ./ejs/data.json.example ./ejs/data.json && mv ./sitemap.xml.example ./sitemap.xml && mkdir -p dist purged"
+    "postinstall": "mkdir -p ./purged && [ -f ejs/data.json ] || cp ejs/data.json.example ejs/data.json"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",

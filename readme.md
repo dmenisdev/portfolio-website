@@ -16,17 +16,19 @@ Not all data has been made available in the JSON, room for improvement. 😅
 
 ## Install 
 ```
-npm run install
+npm install
 ```
 
 ## Init files with personal data
+The npm post install should have automatically taken care of this but in case it didn't you can do it manually.
+
 Files that contain personal data are not in the git repository.
 However for each of those files there is an example file.
-Example files have the extenion `.example`, remove the extension and edit the file to include your personal data.
+Example files have the extenion `.example`, copy the file, remove the extension and edit the file to include your own personal data.
 
-Rename file `./ejs/data.json.example` to `./ejs/data.json`.
+Copy file `./ejs/data.json.example` to `./ejs/data.json`.
 
-Rename file `./sitemap.xml.example` to `./sitemap.xml`.
+Copy file `./sitemap.xml.example` to `./sitemap.xml`.
 
 # How to use
 
@@ -60,7 +62,7 @@ npm run build
 ```
 
 ## Preview production
-You can run preview are you done a build.
+You can run preview after you done a build.
 ```
 npm run preview
 ```

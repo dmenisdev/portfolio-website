@@ -10,7 +10,7 @@ Disallow: /*.zip$
 Disallow: /*.bak$
 
 # Optional: delay for crawlers to avoid stressing your server (for small servers)
-# Crawl-delay: 10
+Crawl-delay: 5
 
 # Optional: Sitemap location (update if you generate a sitemap)
 # Sitemap: https://wbroek.pages.dev/sitemap.xml
