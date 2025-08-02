@@ -3,14 +3,14 @@ Simple portfolio website that reads the portfolio data from a JSON file.
 
 NOTE:
 This git contains the source code of the portfolio website I use however the install instruction have not been tested. 😬
-If there are any issue add them to the Github issue list of this project.
+If there are any issues add them to the Github issue list of this project.
 Not all data has been made available in the JSON, room for improvement. 😅
 
 ## Objectives
 1. Keeping It Super Simple.
 2. Static website with no hosting dependencies.
 3. Portfolio data stored and managed separately.
-4. Keep local dependencies to a minimum.
+4. Keep dependencies to a minimum.
 
 # Installation
 
